@@ -1,0 +1,124 @@
+warning: LF will be replaced by CRLF in web/vistas/vehiculos.jsp.
+The file will have its original line endings in your working directory
+[1mdiff --git a/web/vistas/vehiculos.jsp b/web/vistas/vehiculos.jsp[m
+[1mindex a35b777..24eda97 100644[m
+[1m--- a/web/vistas/vehiculos.jsp[m
+[1m+++ b/web/vistas/vehiculos.jsp[m
+[36m@@ -21,117 +21,6 @@[m
+     <body>[m
+         <h1>Hello, world!</h1>[m
+ [m
+[31m-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">[m
+[31m-[m
+[31m-            <!-- Sidebar - Brand -->[m
+[31m-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">[m
+[31m-                <div class="sidebar-brand-icon rotate-n-15">[m
+[31m-                    <i class="fas fa-laugh-wink"></i>[m
+[31m-                </div>[m
+[31m-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>[m
+[31m-            </a>[m
+[31m-[m
+[31m-            <!-- Divider -->[m
+[31m-            <hr class="sidebar-divider my-0">[m
+[31m-[m
+[31m-            <!-- Nav Item - Dashboard -->[m
+[31m-            <li class="nav-item active">[m
+[31m-                <a class="nav-link" href="index.html">[m
+[31m-                    <i class="fas fa-fw fa-tachometer-alt"></i>[m
+[31m-                    <span>Dashboard</span></a>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Divider -->[m
+[31m-            <hr class="sidebar-divider">[m
+[31m-[m
+[31m-            <!-- Heading -->[m
+[31m-            <div class="sidebar-heading">[m
+[31m-                Interface[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <!-- Nav Item - Pages Collapse Menu -->[m
+[31m-            <li class="nav-item">[m
+[31m-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">[m
+[31m-                    <i class="fas fa-fw fa-cog"></i>[m
+[31m-                    <span>Components</span>[m
+[31m-                </a>[m
+[31m-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">[m
+[31m-                    <div class="bg-white py-2 collapse-inner rounded">[m
+[31m-                        <h6 class="collapse-header">Custom Components:</h6>[m
+[31m-                        <a class="collapse-item" href="buttons.html">Buttons</a>[m
+[31m-                        <a class="collapse-item" href="cards.html">Cards</a>[m
+[31m-                    </div>[m
+[31m-                </div>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Nav Item - Utilities Collapse Menu -->[m
+[31m-            <li class="nav-item">[m
+[31m-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">[m
+[31m-                    <i class="fas fa-fw fa-wrench"></i>[m
+[31m-                    <span>Utilities</span>[m
+[31m-                </a>[m
+[31m-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">[m
+[31m-                    <div class="bg-white py-2 collapse-inner rounded">[m
+[31m-                        <h6 class="collapse-header">Custom Utilities:</h6>[m
+[31m-                        <a class="collapse-item" href="utilities-color.html">Colors</a>[m
+[31m-                        <a class="collapse-item" href="utilities-border.html">Borders</a>[m
+[31m-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>[m
+[31m-                        <a class="collapse-item" href="utilities-other.html">Other</a>[m
+[31m-                    </div>[m
+[31m-                </div>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Divider -->[m
+[31m-            <hr class="sidebar-divider">[m
+[31m-[m
+[31m-            <!-- Heading -->[m
+[31m-            <div class="sidebar-heading">[m
+[31m-                Addons[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <!-- Nav Item - Pages Collapse Menu -->[m
+[31m-            <li class="nav-item">[m
+[31m-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">[m
+[31m-                    <i class="fas fa-fw fa-folder"></i>[m
+[31m-                    <span>Maestros</span>[m
+[31m-                </a>[m
+[31m-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">[m
+[31m-                    <div class="bg-white py-2 collapse-inner rounded">[m
+[31m-                        <h6 class="collapse-header">Login Screens:</h6>[m
+[31m-                        <a class="collapse-item" href="login.html">Login</a>[m
+[31m-                        <a class="collapse-item" href="register.html">Register</a>[m
+[31m-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>[m
+[31m-                        <div class="collapse-divider"></div>[m
+[31m-                        <h6 class="collapse-header">Other Pages:</h6>[m
+[31m-                        <a class="collapse-item" href="404.html">404 Page</a>[m
+[31m-                        <a class="collapse-item" href="blank.html">Blank Page</a>[m
+[31m-                    </div>[m
+[31m-                </div>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Nav Item - Charts -->[m
+[31m-            <li class="nav-item">[m
+[31m-                <a class="nav-link" href="charts.html">[m
+[31m-                    <i class="fas fa-fw fa-chart-area"></i>[m
+[31m-                    <span>Charts</span></a>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Nav Item - Tables -->[m
+[31m-            <li class="nav-item">[m
+[31m-                <a class="nav-link" href="tables.html">[m
+[31m-                    <i class="fas fa-fw fa-table"></i>[m
+[31m-                    <span>Tables</span></a>[m
+[31m-            </li>[m
+[31m-[m
+[31m-            <!-- Divider -->[m
+[31m-            <hr class="sidebar-divider d-none d-md-block">[m
+[31m-[m
+[31m-            <!-- Sidebar Toggler (Sidebar) -->[m
+[31m-            <div class="text-center d-none d-md-inline">[m
+[31m-                <button class="rounded-circle border-0" id="sidebarToggle"></button>[m
+[31m-            </div>[m
+[31m-[m
+[31m-        </ul>[m
+ [m
+ [m
+         <!-- Optional JavaScript -->[m
