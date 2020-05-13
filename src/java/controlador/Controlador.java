@@ -108,10 +108,7 @@ public class Controlador extends HttpServlet {
             }
             request.getRequestDispatcher("vistas/empleados.jsp").forward(request, response);
         }
-        if (menu.equals("vehiculos")) {
-            System.out.println("ventana vehiculos");
-            request.getRequestDispatcher("vistas/vehiculos.jsp").forward(request, response);
-        }
+        
         
         if (menu.equals("principal")) {
             request.getRequestDispatcher("principal.jsp").forward(request, response);

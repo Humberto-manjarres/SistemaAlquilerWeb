@@ -22,7 +22,7 @@
             <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#"><span class="fa fa-home"></span> Home</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                  <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=vehiculos&accion=listar" target="myFrame"><span class="fa fa-car"></span> Vehiculos <span class="sr-only">(current)</span></a>
+                  <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="ControladorVehiculo?menu=vehiculos&accion=listar" target="myFrame"><span class="fa fa-car"></span> Vehiculos <span class="sr-only">(current)</span></a>
                 <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#"><span class="fa fa-users"></span> Clientes</a>
                 <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#"><span class="fa fa-key"></span> Alquiler</a>
                 <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=empleados&accion=listar" target="myFrame"><span class="fa fa-user"></span> Empleados</a>
