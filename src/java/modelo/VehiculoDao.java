@@ -27,17 +27,18 @@ public class VehiculoDao extends Conexion{
         List<Vehiculo> listaVehiculo=new ArrayList<>();
         try {
             con=conectar();
-            call = con.prepareCall("call crud_vehiculos(?,?,?,?,?,?,?,?)");
+            call = con.prepareCall("call crud_vehiculos(?,?,?,?,?,?,?,?,?)");
             call.setString(1, "");
             call.setString(2, null);
             call.setString(3, "");
             call.setString(4, "");
             call.setString(5, "");
             call.setString(6, "");
-            call.setString(7, "listar");
-            call.registerOutParameter(8, Types.VARCHAR);
+            call.setString(7, "");
+            call.setString(8, "listar");
+            call.registerOutParameter(9, Types.VARCHAR);
             call.execute();
-            if (call.getString(8).equals("0|")) {
+            if (call.getString(9).equals("0|")) {
                 rs = call.getResultSet();
                 while (rs.next()) {
                     vehiculo=new Vehiculo();
@@ -47,6 +48,7 @@ public class VehiculoDao extends Conexion{
                     vehiculo.setTipo(rs.getString("tipo"));
                     vehiculo.setSerie(rs.getString("modelo_serie"));
                     vehiculo.setMarca(rs.getString("marca"));
+                    vehiculo.setEstado(rs.getString("estado"));
                     listaVehiculo.add(vehiculo);
                 }
             }

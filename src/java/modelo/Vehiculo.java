@@ -19,14 +19,16 @@ public class Vehiculo {
     private String tipo;
     private String serie;
     private String marca;
+    private String estado;
 
-    public Vehiculo(String placa, Date modelo, String color, String tipo, String serie, String marca) {
+    public Vehiculo(String placa, Date modelo, String color, String tipo, String serie, String marca, String estado) {
         this.placa = placa;
         this.modelo = modelo;
         this.color = color;
         this.tipo = tipo;
         this.serie = serie;
         this.marca = marca;
+        this.estado= estado;
     }
     
     public Vehiculo(){}
@@ -80,6 +82,14 @@ public class Vehiculo {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
     
     
