@@ -18,7 +18,7 @@
         
     </head>
     <body>
-        <div class="d-flex">
+        <div class="row">
             <div class="card col-sm-4">
                 <div class="card-body">
                     <form action="Controlador?menu=empleados" method="POST" name="formEmpleado">
