@@ -7,23 +7,17 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDateTime;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Vehiculo;
-import modelo.VehiculoDao;
 
 /**
  *
  * @author Humberto Manjarres
  */
-public class ControladorVehiculo extends HttpServlet {
-    Vehiculo vehiculo;
-    List<Vehiculo> listaVehiculo=new ArrayList<>();
-    VehiculoDao vehiculoDao;
+public class ControladorCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,36 +31,54 @@ public class ControladorVehiculo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String accion=request.getParameter("accion");
+        
         String menu=request.getParameter("menu");
-        vehiculoDao=new VehiculoDao();
-        if (menu.equals("vehiculos")) {
-            System.out.println("ventana vehiculos");
-            switch(accion){
+        String accion=request.getParameter("accion");
+        
+        if (menu.equals("clientes")) {
+            switch (accion){
+            
                 case "listar":
-                    try {
-                        listaVehiculo=vehiculoDao.listar();
-                        request.setAttribute("lista_vehiculos", listaVehiculo);
-                        for (Vehiculo v : listaVehiculo) {
-                            System.out.println("vehiculos--> "+v.getPlaca());
-                        }
-                    } catch (Exception e) {
-                    }
+                    
                     break;
-                case "eliminar":
-                    System.out.println("eliminar vehiculo");
-                    try {
-                        String p=request.getParameter("id");
-                        System.out.println("placa-->"+p);
-                    } catch (Exception e) {
+                    
+                case "Calcular":
+                    
+                    int prestamo=Integer.parseInt(request.getParameter("txtPrestamo"));
+                    float cuota=Float.parseFloat(request.getParameter("txtNcuotas"));
+                    float porcentaje=Float.parseFloat(request.getParameter("txtPorcentaje"));
+                    //String tiempo=request.getParameter("txtTiempo");
+                    String opcionPago=request.getParameter("opTiempoPago");
+                    System.out.println("op->"+opcionPago);
+                    double valorProcentaje=prestamo*porcentaje/100;
+                    
+                    double t = 0,redondeo;
+                    if (opcionPago.equals("1")) {
+                        redondeo=Math.round(cuota/2);
+                        t=redondeo;
+                    }else if(opcionPago.equals("2")){
+                        t=cuota;
                     }
+                    //System.out.println("tiempo ->"+t);
+                    
+                    double totalIntereses=valorProcentaje * t;//valor total intereses
+                    
+                    double capitalCompleto=prestamo+totalIntereses;//capitalización
+                    double cuotasPagar=capitalCompleto/cuota;//valor cuota
+//                    
+////                    LocalDateTime toDateTime = LocalDateTime.now();
+////                    
+//                    System.out.println("prestamo -> "+prestamo);
+                    System.out.println("porcentaje -> "+ valorProcentaje+" pesos");
+                    System.out.println("total intereses -> "+totalIntereses);
+                    System.out.println(cuota+" cuotas "+cuotasPagar);
+                    System.out.println("total a pagar -> "+capitalCompleto);
+//                    //System.out.println("LocalDateTime -> "+toDateTime);
                     break;
             }
-            request.getRequestDispatcher("vistas/vehiculos.jsp").forward(request, response);
+            request.getRequestDispatcher("vistas/clientes.jsp").forward(request, response);
         }
-        if (menu.equals("ver")) {
-            System.out.println("ver");
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

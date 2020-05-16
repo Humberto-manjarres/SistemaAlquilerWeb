@@ -78,12 +78,11 @@
                                 <td>${vehiculos.getSerie()}</td>
                                 <td>${vehiculos.getMarca()}</td>
                                 <td>
-                                    <a href="ControladorVehiculo?menu=vehiculo&accion=editar&id=${vehiculo.getPlaca()}" class="btn btn-warning">Editar</a>
-                                    <a href="ControladorVehiculo?menu=vehiculo&accion=eliminar&id=${vehiculo.getPlaca()}" class="btn btn-danger">Eliminar</a>
+                                    <a href="ControladorVehiculo?menu=vehiculos&accion=editar&id=${vehiculos.getPlaca()}" class="btn btn-warning">Editar</a>
+                                    <a href="ControladorVehiculo?menu=vehiculos&accion=eliminar&id=${vehiculos.getPlaca()}" class="btn btn-danger">Eliminar</a>
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                        Ver
-                                    </button>
+                                    <a href="ControladorVehiculo?menu=ver" class="btn btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Ver</a>
+                                       
                                 </td>
                             </tr>
                         </c:forEach>
@@ -108,7 +107,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Mostraremos la imagen del vehiculo.
+                        Mostraremos la imagen del vehiculo. 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

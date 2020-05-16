@@ -17,6 +17,10 @@
         <servlet-name>ControladorVehiculo</servlet-name>
         <servlet-class>controlador.ControladorVehiculo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCliente</servlet-name>
+        <servlet-class>controlador.ControladorCliente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -32,6 +36,10 @@
     <servlet-mapping>
         <servlet-name>ControladorVehiculo</servlet-name>
         <url-pattern>/ControladorVehiculo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCliente</servlet-name>
+        <url-pattern>/ControladorCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
